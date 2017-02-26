@@ -1,7 +1,7 @@
 var formList = {
   container: document.querySelector("#form-list-container"), // query dom for #form-list-container
   getValuesArray: function(){
-    // write a function which returns input values as an array
+    // write a function which returns input values (from the html) as an array
 
   },
   sortByAlpha: function(array){
