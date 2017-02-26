@@ -17,9 +17,6 @@ var formList = {
     // write a function which removes the ul from the page
 
   },
-  addUl: function(ul){
-    // write a function which adds the
-  }
   checkElements: function(){
     if(!formList.container){
       return console.error("No form container found");
@@ -38,16 +35,12 @@ var formList = {
     if(!formList.checkElements()){
       return console.error("App could not start");
     };
-    // add a click listener to the save button, which adds the input values
-    // as a ul on the page
     formList.saveButton.addEventListener("click", function(){
       formList.removeUl();
       var inputArray = formList.getValuesArray();
       var ul = formList.generateUl(inputArray);
       formList.container.appendChild(ul);
     });
-    // add a click listener to the sort button, which sorts the input values
-    // then adds them as a ul on the page
     formList.sortButton.addEventListener("click", function(){
       formList.removeUl();
       var inputArray = formList.getValuesArray();
