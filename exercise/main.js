@@ -1,6 +1,7 @@
 var formList = {
-  container: document.querySelector("#form-list-container"),
+  container: document.querySelector("#form-list-container"), // query dom for #form-list-container
   getValuesArray: function(){
+    // write a function which returns input values as an array
     return Array.prototype.slice
       .call(formList.container.querySelectorAll("input"))
       .map(function(input){
@@ -11,9 +12,12 @@ var formList = {
       });
   },
   sortByAlpha: function(array){
+    // return a sorted copy of the array
     return array.concat().sort();
   },
   generateUl: function(array){
+    // write a function which returns a ul html element containing li's for
+    // each array element
     var ulNode = document.createElement("ul");
     var liNode;
     var textNode;
@@ -27,6 +31,7 @@ var formList = {
     return ulNode;
   },
   removeUl: function(){
+    // write a function which removes the ul from the page
     var ul = formList.container.querySelector("ul");
     if(ul){
       formList.container.removeChild(ul);
@@ -48,7 +53,8 @@ var formList = {
   },
   init: function(){
     formList.checkElements();
-    // save
+    // add a click listener to the save button, which adds the input values
+    // as a ul on the page
     formList.saveButton.addEventListener("click", function(){
       formList.removeUl();
       var inputArray = formList.getValuesArray();
