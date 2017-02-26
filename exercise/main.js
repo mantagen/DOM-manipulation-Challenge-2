@@ -61,7 +61,8 @@ var formList = {
       var ul = formList.generateUl(inputArray);
       formList.container.appendChild(ul);
     });
-    // sort & save
+    // add a click listener to the sort button, which sorts the input values
+    // then adds them as a ul on the page
     formList.sortButton.addEventListener("click", function(){
       formList.removeUl();
       var inputArray = formList.getValuesArray();
@@ -69,6 +70,9 @@ var formList = {
       var ul = formList.generateUl(sorted);
       formList.container.appendChild(ul);
     });
+    // EXTENSION
+    // Try adding another feature like a filter or another event listener
+    // It's up to you!
   },
 }
 formList.init();
